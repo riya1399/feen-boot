@@ -1,0 +1,26 @@
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #0477C2;
+    color:#fff;
+}
+.clock{
+    font-size: 56px;
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+.greeting{
+    border-bottom:3px solid white ;
+    /* padding-bottom: 5px; */
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    height:20vh;
+}
+.class #time{
+    color: #fff;
+    font-size: 50px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}

@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+  }
+  
+  body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0477C2;
+  }
+  
+  .datetime{
+    color: #fff;
+
+
+  }
+  .greeting::after{
+    content: '-';
+    display: block;
+    margin-top: 60px;
+    font-size: 250px;
+    font-weight: 100;
+
+  }
+  .greeting{
+    text-align: center;
+    font-size: 70px;
+    margin-bottom: 50px;
+   
+  }
+  .time{
+    margin:100px 0;
+    font-size: 100px;
+    font-weight: 600;
+
+  }
+  .date{
+    font-size: 40px;
+    text-align:center;
+  }

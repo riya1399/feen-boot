@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="clock.css">
+    <script src="clock.js"></script> 
+    <title>clock</title>
+</head>
+<body>
+    <div class="greeting">
+        <div id="greeting"></div>
+        <div id="time">12:00:00 PM</div>
+        <div class="date">
+            <span id="month"></span>Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+          </div>
+    </div>
+    <script>
+        setInterval(()=>{
+            const time=document.querySelector("#time");
+            var date=new Date();
+    var hour=date.getHours();
+    var min=date.getMinutes();
+    var sec=date.getSeconds();
+    var midday="AM";
+    if(hour>12){
+        midday="PM"
+        hour=hour-12;
+    }
+    if (hour<10){
+        hour="0"+hour
+    }
+    if (min<10){
+        min="0"+min
+    }
+    if (sec<10){
+        sec="0"+sec
+    }
+    time.textContent=hour+":"+min+":"+sec+" "+midday;
+
+    if(hour<12){
+        var greeting="Good Morning";
+    }
+    else if(hour>=12 && hour<=5){
+        var greeting="Good Afternoon";
+    }
+    else if(hour>=5 && hour<=9){
+        var greeting="Good Evening";
+    }
+    else if (hour>=9 && hour<=6){
+        var greeting="Good Night";
+    }
+    document.getElementById("greeting").innerHTML=greeting;
+
+        });
+
+        setInterval(()=>{
+            const date=document.querySelector("#month");
+    mo = now.getMonth(),
+    dnum = now.getDate(),
+    yr = now.getFullYear()
+    date.textContent=mo+" "+dnum+" "+yr;
+        });
+    </script>
+</body>
+</html>
